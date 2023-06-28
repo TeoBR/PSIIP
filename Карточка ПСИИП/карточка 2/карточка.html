@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Мой HTML-документ</title>
+	<style>
+		body {
+			background-color: white;
+		}
+
+		#text {
+			font-family: Arial;
+			font-size: 16px;
+			color: black;
+		}
+
+		a {
+			color: blue;
+			text-decoration: underline;
+		}
+
+		#stylesButton {
+			display: none;
+		}
+
+		#stylesButton.active {
+			display: block;
+		}
+	</style>
+    <script>
+
+        function displayCookies() {
+            var cookies = document.cookie.split("; ");
+            var output = "";
+            for (var i = 0; i < cookies.length; i++) {
+                output += cookies[i] + "<br>";
+            }
+            document.getElementById("cookiesOutput").innerHTML = output;
+        }
+
+        setInterval(displayCookies, 10000);
+
+        function deleteElement() {
+            var element = document.getElementById("element3");
+            element.parentNode.removeChild(element);
+        }
+    </script>
+   
+</head>
+<body>
+	<p id="text">Фамилия Имя Отчество: Муравьёва Валерия Сергеевна</p>
+	<a href="https://www.youtube.com">Ссылка на мой любимый сайт</a>
+	<br>
+    <img id="element3" src="image.png" alt="Мое изображение" onload="displayCookies()" onclick="deleteElement()" style="width: 70%; height: 30%;">
+    <br>
+    <h3>Cookie информация:</h3>
+    <div id="cookiesOutput"></div>
+    <script>displayCookies();</script>
+
+	<button id="stylesButton" onclick="changeStyles()">Изменить стили</button>
+
+	<script>
+		function changeStyles() {
+			var textElement = document.getElementById("text");
+			textElement.style.fontFamily = "Arial";
+			textElement.style.fontSize = "11px";
+			textElement.style.color = "red";
+
+			var linkElements = document.getElementsByTagName("a");
+			for (var i = 0; i < linkElements.length; i++) {
+				linkElements[i].style.color = "green";
+				linkElements[i].style.textDecoration = "none";
+			}
+		}
+
+		document.addEventListener("DOMContentLoaded", function() {
+			var stylesButton = document.getElementById("stylesButton");
+			stylesButton.style.display = "inline-block";
+		});
+	</script>
+    <script>
+		// Функция для получения информации об операционной системе клиента
+		function getOperatingSystem() {
+			var userAgent = navigator.userAgent.toLowerCase();
+			var operatingSystem = "Неизвестная ОС";
+
+			if (userAgent.indexOf("win") !== -1) {
+				operatingSystem = "Windows";
+			} else if (userAgent.indexOf("mac") !== -1) {
+				operatingSystem = "Mac OS";
+			} else if (userAgent.indexOf("linux") !== -1) {
+				operatingSystem = "Linux";
+			} else if (userAgent.indexOf("android") !== -1) {
+				operatingSystem = "Android";
+			} else if (userAgent.indexOf("ios") !== -1) {
+				operatingSystem = "iOS";
+			}
+
+			return operatingSystem;
+		}
+
+		// Функция для отображения информации об операционной системе в диалоговом окне
+		function showOperatingSystem() {
+			var operatingSystem = getOperatingSystem();
+			alert("Операционная система клиента: " + operatingSystem);
+		}
+
+		// Отображение диалогового окна через 6 секунд после загрузки страницы
+		setTimeout(showOperatingSystem, 6000);
+	</script>
+</body>
+</html>

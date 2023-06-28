@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Работа CSS</title>
+        <style>
+            body
+            {
+                font-family: Arial;
+                font-size: 14px;
+                background-color: orange;
+                color: red;
+            }
+            a
+            {
+              text-decoration: none;  
+            }
+            a:visited  /*Задаём стиль посещённой ссылки в таблице стилей*/
+            {
+                color: red;
+            }
+            a:hover
+            {
+                color: green;
+                text-decoration: underline;  /*Добавляем подчеркивание ссылки при наведении курсора*/
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Муравьёва Валерия Сергеевна</h3>
+        <p style="text-decoration: underline; color: red; text-align: right;">Любимый город: Гродно</p>
+        <div style="background-color: blue; width: 100px; height:250px; text-align: center;">Увлекаюсь дизайном, рисованием и писательством</div><br>
+        <a href="Arhiv.rar" download>Скачать архив</a>  <!--Ссылка на скачивание архива, находящегося в каталоге с сайтом-->
+        <p>Каскадность таблиц стилей в мой работе можно наблюдать в коде.
+        Я использую таблицу стилей для общего оформления теста и иных элементов,
+         но для конкретных элементов могу добавить индивидумального оформления.
+        Наприме, весь документ имеет один шрифт и размер шрифта, но надпись "Любимый город"
+    имеет отличное от других элементов оформление.</p>
+        </body>
+</html>

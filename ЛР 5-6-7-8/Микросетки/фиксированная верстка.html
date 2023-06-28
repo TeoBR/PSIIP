@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Вариант 14</title>
+        <link rel="stylesheet" href="body.css">
+    </head>
+    <body>
+        <!--- Основной блок-->
+        <div style="display: flex; flex-wrap: wrap; height: 100%;">    
+        <!--Верхнее меню-->      
+            <div class="menu" style="display: flex;">     
+                <!--Иконка в меню-->
+                <img style="margin-left:2.2vh; margin-bottom: 2vh;" src="menu_icon.png"> 
+                <div class="menu_font" 
+                style="width: 100%; display: flex; justify-content: space-around; align-items: center;"> 
+                <!--Пункты меню-->
+                <p>Главная</p>
+                <p>О поликлинике</p>
+                <p>Услуги</p>
+                <p>Контакты</p>
+                <p>Здоровый образ жизни</p>
+                </div>
+            </div>
+            <div class="block" style="display: flex; width: 20%; height: 120vh; margin-left: 1vh;
+            margin-top: 2vh;justify-content:center;flex-direction: column;align-items: center; justify-content: space-around;">
+                <!--Блок переключения информации-->
+                <p>Рентгеновские услуги</p>
+                <p>Услуги по массажу</p>
+                <p>Эндоскопические исследования</p>
+                <p>Эндоскопические исследования</p>
+                <p>Ультразвуковые исследования</p>
+                <p>Акушерство и гинекология</p>
+
+
+            </div>
+            <!--Блок с формой-->
+            <div
+            style="display: flex; width: 75%; height: 150vh; background-size: cover;
+            margin-top: 2vh; margin-left: 5vh; background-color: white; border-radius: 10vh; flex-wrap: wrap; justify-content: center;">
+            <b><p style="display: flex;justify-content: center;margin-left: 10vh; font-size:4vh;">Новый аккаунт</p></b>
+            <div style="display: flex;justify-content: center; height: 50%;width: 70%; ">
+            <form style="width: 50vh; margin-top: 5vh;">
+                <label for="name" required>Как к вам обращаться:</label>
+                <input type="text" id="name" name="name" ><br><br>
+                
+                <label for="email" required>Электронная почта:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                
+                <label for="country" required>Страна:</label>
+                <select id="country" name="country" style="width: 10vh;height: 5vh;">
+                  <option value="Russia">Россия</option>
+                  <option value="China">Китай</option>
+                  <option value="USA">США</option>
+                  <option value="Belarus">Беларусь</option>
+                </select><br><br>
+                
+                <label for="phone" required>Мобильный телефон:</label>
+                <input type="tel" id="phone" name="phone"><br><br>
+                
+                <input type="checkbox" id="invitation" name="invitation" value="yes">
+                <label for="invitation">Пришел по приглашению</label><br>
+                
+                <input type="checkbox" id="terms" name="terms" value="yes">
+                <label for="terms" required>Я принимаю условия договора</label><br>
+                
+                <input type="checkbox" id="age" name="age" value="yes">
+                <label for="age">Мне исполнилось 18</label><br><br>
+                <div style="display: flex; justify-content: space-around;">            
+                <label for="verification">Код проверки:</label>
+                <img src="https://pbs.twimg.com/media/DfAvq9iX0AEtgFQ?format=jpg&name=medium" 
+                style="width: 30vh; height: 15vh;">
+                </div>
+                
+                <button type="submit" style="background-color: green;font-family: 'Impact'; width: 25vh;height: 6vh;font-size: 2.4vh;">Зарегистрироваться</button>
+                
+              </form> 
+            </div> 
+        
+            <div class="body-card">
+              <div class="form-container">
+                <div class="form-title">Check Out</div>
+                <img class="form-image" src="card.ico" alt="Credit Card Image" />
+                <div class="form-label">Credit card details</div>
+                <label class="form-label" for="card-number">Card number</label>
+                <div class="input-container">
+                    <input type="text" placeholder="">
+                    <input type="text" placeholder="">
+                    <input type="text" placeholder="">
+                    <input type="text" placeholder="">
+                  </div>
+                  
+                <label class="form-label" for="cardholder-name">Cardholder name</label>
+                <input class="form-input" type="text" id="cardholder-name" />
+                <label class="form-label" for="expiry-date">Expiry Date</label>
+                <div>
+                <input class="form-input" type="text" id="expiry-date" placeholder="MM/YY", style="width: 300px;">
+                <input class="form-input" type="password" placeholder="CVV", style="width: 50px;">
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" id="safe-card" />
+                  <label for="safe-card">Safe card</label>
+                </div>
+                <button class="form-button" type="button">Pay Secure</button>
+              </div>
+              </div>
+            </div>
+            <div class="menu" style="height: 150px;margin-top: 2vh;display: flex;flex-direction: column; justify-content: center;">
+                <!--Блок для названия видео-->
+                <p
+                 class="menu_font" style="font-size: 4vh; display: flex;justify-content: center;">
+                 Правила оказания первой помощи при обмороке</p>
+            </div>
+            <div class="block" style="width: 50%;height: 70vh;display: flex; margin: 0 auto; margin-top: 2.2vh;">
+                <!--Блок для чего-то 2-->
+                
+                <iframe width="740" height="555" src="https://www.youtube.com/embed/FABmZEpABN8" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                 encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="footer" style="display: flex; flex-direction: row;justify-content: space-between;">
+                <div style="margin: 2vh;">
+                    <!--Иконки с ссылками-->
+                <a href="https://www.instagram.com/teobloodresin/"><img src="instagram.png" width="10%"></a>
+                <a href="https://www.tumblr.com/blog/teobr"><img src="tumblr.png" width="10%"></a>
+                </div>
+                <div class="menu_font" style="margin: 2vh;">
+                    <p>Контакты: +375 25 9329442</p>
+                    <p>Место обучения: Учреждение образования гродненский государственный политехнический колледж</p>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

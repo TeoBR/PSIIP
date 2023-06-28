@@ -1,0 +1,198 @@
+body
+{
+    background-color: #c4c9e7;
+}
+p
+{
+    padding: 1%;
+}
+.main-block {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.menu
+{
+    border-radius: 3.5vh;
+    background-color: #dd666c;
+    width: 100%;
+    margin: 1vh;
+    display: flex;
+}
+
+.menu-icon {
+    margin-left: 2.2vh;
+    margin-bottom: 2vh;
+}
+
+.menu-font
+{
+    font-family: 'Baron neue';
+    font-size: 1.9vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.block
+{
+    background-color: #d3a6cd;
+    border-radius: 3vh; 
+    font-family: 'Cascadia Mono PL';
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-block
+{
+    border-radius: 10vh;
+    border: 0.5vh solid #d3a6cd;
+    width: 100%;
+    height: 70vh;
+    background-image: url('background-1.jpg');
+    background-size: cover;
+    margin-top: 2vh;
+}
+
+.video-title {
+    font-size: 4vh;
+}
+
+.video-block {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.2vh;
+}
+
+.footer {
+    width: 100%;
+    height: 20vh;
+    background-color: #dd666c;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-icons {
+    margin: 2vh;
+}
+
+.footer-info {
+    margin: 2vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-device-width: 375px) 
+{
+    body
+{
+    background-color: #c4c9e7;
+}
+p
+{
+    padding: 1%;
+}
+.main-block {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.menu
+{
+    border-radius: 3.5vh;
+    background-color: #dd666c;
+    width: 100%;
+    margin: 1vh;
+    display: flex;
+}
+
+.menu-icon {
+    margin-left: 2.2vh;
+    margin-bottom: 2vh;
+}
+
+.menu-font
+{
+    font-family: 'Baron neue';
+    font-size: 1.9vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.block
+{
+    background-color: #d3a6cd;
+    border-radius: 3vh; 
+    font-family: 'Cascadia Mono PL';
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9vh;
+}
+
+.img-block
+{
+    border-radius: 10vh;
+    border: 0.5vh solid #d3a6cd;
+    width: 100%;
+    height: 70vh;
+    background-image: url('background-1.jpg');
+    background-size: cover;
+    margin-top: 2vh;
+}
+
+.video-title {
+    font-size: 2vh;
+}
+
+.video-block {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.2vh;
+}
+
+.footer {
+    width: 100%;
+    height: 20vh;
+    background-color: #dd666c;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-icons {
+    margin: 2vh;
+}
+
+.footer-info {
+    margin: 2vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+  }

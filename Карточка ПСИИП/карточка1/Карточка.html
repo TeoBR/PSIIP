@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Карточки ПССИП</title>
+    <style>
+        /* Стили для диалогового окна */
+        .dialog-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+        }
+  
+        .dialog-window {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          text-align: center;
+        }
+      </style>
+    <script src="calculator.js"></script>
+    <script>
+        function showTime() {
+          var currentDate = new Date();
+          var hours = currentDate.getHours();
+          var minutes = currentDate.getMinutes();
+          var seconds = currentDate.getSeconds();
+  
+          // Добавляем ведущий ноль, если число меньше 10
+          hours = (hours < 10) ? "0" + hours : hours;
+          minutes = (minutes < 10) ? "0" + minutes : minutes;
+          seconds = (seconds < 10) ? "0" + seconds : seconds;
+  
+          var currentTime = hours + ":" + minutes + ":" + seconds;
+  
+          // Показываем диалоговое окно с текущим временем
+          var dialogOverlay = document.getElementById("dialog-overlay");
+          var dialogWindow = document.getElementById("dialog-window");
+          dialogWindow.innerHTML = "Текущее время: " + currentTime;
+          dialogOverlay.style.display = "flex";
+        }
+      </script>
+    <script>
+        // Функция для определения длины строки s2
+        function getLength() {
+          var s2 = "Переулок Южный 5-34";
+          var length = s2.length;
+          document.getElementById("lengthOutput").innerHTML = "Длина строки s2: " + length;
+        }
+  
+        // Функция для выделения 11-го символа из строки s1 и определения его ASCII-кода
+        function getCharacter() {
+          var s1 = "Я люблю Гродно";
+          var character = s1.charAt(10);
+          var charCode = character.charCodeAt(0);
+          document.getElementById("charOutput").innerHTML = "20-й символ в строке s1: " + character + " (ASCII-код: " + charCode + ")";
+        }
+  
+        // Функция для замены слова "Гродно" на "политех" в строке s1
+        function replaceWord() {
+          var s1 = "Я люблю Гродно";
+          var updatedString = s1.replace("Гродно", "политех");
+          document.getElementById("stringOutput").innerHTML = "Обновленная строка s1: " + updatedString;
+        }
+      </script>
+</head>
+<body>
+    <div>
+        <h1>Всплывающее диалоговое окно</h1>
+
+        <button onclick="showTime()">Показать время</button>
+    
+        <div class="dialog-overlay" id="dialog-overlay" style="display: none;">
+          <div class="dialog-window" id="dialog-window"></div>
+        </div>
+    </div>
+    <div>
+    <div id="dialog-window" style="margin-top: 100px;"></div>
+    <button onclick="showMessage()">Показать фразу</button>
+    </div>
+    <script>
+        // Получаем ссылку на элемент диалогового окна
+        var dialogWindow = document.getElementById("dialog-window");
+
+        // Метод для вывода фразы
+        function showMessage() {
+            // Переменные для цикла и фразы
+            var count = 0;
+            var message = "Сегодня лучший день";
+
+            // Цикл while для вывода фразы 5 раз
+            while (count < 5) {
+                // Добавляем фразу в диалоговое окно
+                dialogWindow.innerHTML += message + "<br>";
+
+                // Увеличиваем счетчик
+                count++;
+            }
+        }
+    </script>
+    <div style="margin-top: 100px;">
+        <h1>Добавление чисел в массив</h1>
+    <input type="number" id="inputNumber1" placeholder="Введите число 1">
+    <input type="number" id="inputNumber2" placeholder="Введите число 2">
+    <button onclick="addNumbers()">Добавить</button>
+
+    <p id="arrayContent"></p>
+
+    <script>
+        var arr = [1, 2, 3, 4, 5];
+
+        function addNumbers() {
+            var inputElement1 = document.getElementById("inputNumber1");
+            var inputElement2 = document.getElementById("inputNumber2");
+            var number1 = parseInt(inputElement1.value);
+            var number2 = parseInt(inputElement2.value);
+
+            // Проверяем, что введенные значения являются числами
+            if (!isNaN(number1) && !isNaN(number2)) {
+                arr.push(number1, number2);
+                inputElement1.value = "";
+                inputElement2.value = "";
+                showArrayContent();
+            } else {
+                alert("Пожалуйста, введите два числа!");
+            }
+        }
+
+        function showArrayContent() {
+            var arrayContentElement = document.getElementById("arrayContent");
+            arrayContentElement.textContent = "Содержимое массива: " + arr;
+        }
+    </script>
+    </div>
+    <div style="margin-top: 100px;">
+        <h1>Калькулятор</h1>
+        <input type="number" id="inputValue" placeholder="Введите значение">
+        <button onclick="updateResult()">Рассчитать</button>
+    
+        <p id="result"></p>
+    </div>
+    <div style="margin-top: 100px;">
+        <h1>Языковые строки</h1>
+        <p>S1: Я люблю Гродно</p>
+        <p>S2: Переулок Южный 5-34</p>
+        <button onclick="getLength()">Определить длину строки s2</button>
+        <p id="lengthOutput"></p>
+    
+        <button onclick="getCharacter()">Выделить 11-й символ из строки s1</button>
+        <p id="charOutput"></p>
+    
+        <button onclick="replaceWord()">Заменить слово "Гродно" на "политех" в строке s1</button>
+        <p id="stringOutput"></p>
+    </div>
+</body>
+</html>

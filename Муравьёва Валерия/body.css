@@ -1,0 +1,13 @@
+a
+            {
+              text-decoration: none;  
+            }
+            a:visited  /*Задаём стиль посещённой ссылки в таблице стилей*/
+            {
+                color: red;
+            }
+            a:hover
+            {
+                color: green;
+                text-decoration: underline;  /*Добавляем подчеркивание ссылки при наведении курсора*/
+            }
